@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню кафе фастфуда</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => section.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'block';
+        }
+        window.onload = () => showSection('burgers');
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Меню кафе фастфуда</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showSection('drinks')">Напитки</a></li>
+            <li><a href="#" onclick="showSection('burgers')">Бургеры</a></li>
+            <li><a href="#" onclick="showSection('sides')">Закуски</a></li>
+            <li><a href="#" onclick="showSection('desserts')">Десерты</a></li>
+        </ul>
+    </nav>
+    <section id="drinks" style="display: none;">
+        <h2>Напитки</h2>
+        <div class="img" onclick="toggleInfo(this)">
+            <img src="./src/кола.jpg" alt="Кола" style="width:100%;">
+            <div class="text">Кола, 100 сом</div>
+          </div>
+       
+        
+    </section>
+    <section id="burgers">
+        <h2>Бургеры</h2>
+        <div class="img" onclick="toggleInfo(this)">
+            <img src="./src/Бургер.jpg" alt="Кола" style="width:100%;">
+            <div class="text">Бургер, 125 сом</div>
+          </div>
+
+          <div class="img" onclick="toggleInfo(this)">
+            <img src="./src/Шаурма.jpg" alt="Кола" style="width:100%;">
+            <div class="text">Шаурма, 170 сом</div>
+          </div>
+    </section>
+    <section id="sides" style="display: none;">
+        <h2>Закуски</h2>
+        <div class="menu-item">Картошка фри</div>
+        <div class="menu-item">Наггетсы</div>
+    </section>
+    <section id="desserts" style="display: none;">
+        <h2>Десерты</h2>
+        <div class="menu-item">Мороженое</div>
+        <div class="menu-item">Чизкейк</div>
+    </section>
+</body>
+</html>
